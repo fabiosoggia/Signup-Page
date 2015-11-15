@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Signup Page</title>
+
+	<!-- Google Fonts -->
+	<link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+
+	<!-- Styles -->
+	<!-- build:css css/style.min.css -->
+	<!--
+	<link rel="stylesheet" href="../node_modules/normalize.css/normalize.css" />
+	<link rel="stylesheet" href="../node_modules/basscss/css/basscss.css" />
+	<link rel="stylesheet" href="../css/animate.css" />
+	<link rel="stylesheet" href="../style.css" />
+	-->
+	<link rel="stylesheet" href="css/style.css" />
+	<!-- /build -->
+</head>
+<body>
+	<div class="container p2 md-p4 clearfix">
+
+		<!-- Page header -->
+		<header id="page-header" class="mb4">
+			<h1>Sign up</h1>
+			<!-- I think there is a better way to do this. -->
+			<h2 class="md-hide">Mobile view.</h2>
+			<h2 class="md-show">Desktop view.</h2>
+		</header>
+
+		<!-- The signin form -->
+		<div class="form col-12 sm-col-10 mx-auto clearfix animated bounce">
+
+			<!--
+			The sign in form contains is made by three different sections:
+			1. .title: it's the caption of the form (logo and title);
+			2. .fields: a wrapper around all the input fields;
+			3. .footer: the footer of the form, in this case it contains a signon link.
+			-->
+			<div class="title col col-12 p2 md-p3 clearfix table">
+				<div class="logo col-2 md-col md-col-12 table-cell align-middle">
+					<img alt="MyCompany" src="img/logo.svg">
+				</div>
+				<div class="col-10 md-col md-col-12 table-cell align-middle">
+					<h3>Create new account</h3>
+					<p>Enter yout credentials below.</p>
+				</div>
+			</div>
+
+			<div class="fields col col-12 p2 md-p3 clearfix">
+				<form class="mxn1 clearfix md-col-10 mx-auto" id="signin-form">
+					<label class="mb2 col col-12 md-col-7 px1 md-mt2">
+						Full name
+						<input data-parsley-required="true" id="full-name" name="full-name" placeholder="Full name" type="text" class="block col-12 mt1 field">
+					</label>
+
+					<label class="mb2 col col-12 md-col-5 px1">
+						Username
+						<input data-parsley-required="true" id="username" name="username" placeholder="Username" type="text" class="block col-12 mt1 field">
+					</label>
+
+					<label class="mb2 col col-12 px1">
+						Email address
+						<input data-parsley-required="true" id="email" name="email" placeholder="Email address" type="email" class="block col-12 mt1 field">
+					</label>
+
+					<label class="mb2 col col-12 md-col-7 px1">
+						Country
+						<input data-parsley-required="true" id="country" name="country" placeholder="Country" type="text" class="block col-12 mt1 field">
+					</label>
+
+					<label class="mb2 col col-12 md-col-5 px1">
+						City
+						<input data-parsley-required="true" id="city" name="city" placeholder="City" type="text" class="block col-12 mt1 field">
+					</label>
+
+					<label class="col col-12 px1">
+						Password
+						<input id="password" name="password" placeholder="Password" type="password" class="block col-12 field mt1 combo-first">
+					</label>
+					<label class="mb2 md-mb3 col col-12 px1">
+						<!-- The label element may contain at most one button, input, keygen, meter, output, progress, select, or textarea descendant. Use a second label to wrap the second field. -->
+						<input data-parsley-required="true" data-parsley-equalto="#password" id="r-password" name="r-password" placeholder="Repeat password" type="password" class="block col-12 field combo-last">
+					</label>
+
+					<div class="checkbox col col-12 md-col-7 p2 mb2 px1">
+						<label>
+							<input data-parsley-required="true" id="terms" name="terms" type="checkbox">
+							I accept the <a href="#">Terms &amp; Conditions</a>.
+						</label>
+					</div>
+
+					<div class="col col-12 md-col-5 px1">
+						<button type="submit" class="block col-8 md-col-12 mx-auto btn btn-primary">Create account</button>
+					</div>
+				</form>
+			</div>
+
+			<div class="footer col col-12 p2">
+				Have account already? <a href="#">Sign in</a>
+			</div>
+		</div>
+	</div>
+
+  <!-- Your project file goes here -->
+	<script src="js/lib/jquery.min.js"></script>
+  <!-- build:js js/app.min.js -->
+	<script src="../node_modules/parsleyjs/dist/parsley.js"></script>
+	<script src="js/app.js"></script>
+	<!-- /build -->
+</body>
+</html>

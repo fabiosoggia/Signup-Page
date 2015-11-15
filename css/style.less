@@ -1,0 +1,274 @@
+/******************************************************************************
+ Generic styles
+ *****************************************************************************/
+
+html, body {
+	.Lato();
+	background: #f9f9f9;
+	color: #8890a4;
+}
+
+a {
+	color: #389bff;
+}
+
+.btn-primary {
+	background: #67c60b;
+	color: #fff;
+}
+
+/******************************************************************************
+ Utils
+ *****************************************************************************/
+
+.combo-first {
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+.combo-middle {
+	.combo-first();
+	.combo-last();
+}
+
+.combo-last {
+	border-top: 0;
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+}
+
+/******************************************************************************
+ Fonts utils
+ *****************************************************************************/
+
+.ProximaNova-Semibold {
+	font-family: 'ProximaNova Semibold', 'MyriadPro-Regular', 'Myriad Pro Regular', 'MyriadPro', 'Myriad Pro', 'Montserrat', 'Helvetica', 'Arial', sans-serif;
+	font-weight: normal;
+}
+
+.ProximaNova-Light {
+	font-family: 'ProximaNova Light', 'MyriadPro-Regular', 'Myriad Pro Regular', 'MyriadPro', 'Myriad Pro', 'Montserrat', 'Helvetica', 'Arial', sans-serif;
+	font-weight: lighter;
+}
+
+.Montserrat {
+	font-family: 'Montserrat', 'Helvetica', 'Arial', sans-serif;
+}
+
+.Lato {
+	font-family: 'Lato', 'Helvetica', 'Arial', sans-serif;
+}
+
+
+/******************************************************************************
+ Page header
+ *****************************************************************************/
+
+#page-header {
+
+	/* Title */
+	h1 {
+		.ProximaNova-Semibold();
+
+		font-size: 2rem;
+		line-height: 2rem;
+		margin-top: 0;
+		color: #282b30;
+	}
+
+	/* Subtitle */
+	h2 {
+		.ProximaNova-Light();
+
+		font-size: 1.5rem;
+		line-height: 1em;
+		color: #62666a;
+		margin: 0;
+	}
+}
+
+
+/******************************************************************************
+ Page form
+ *****************************************************************************/
+
+.form {
+
+	/* Style for input fields */
+
+	input {
+		.Lato();
+	}
+
+	button {
+		.Montserrat();
+	}
+
+	input[type="text"],
+	input[type="password"],
+	input[type="email"],
+	button {
+		font-size: 1rem;
+		padding: 1rem;
+	    height: 3rem;
+	    line-height: 1em;
+	}
+
+	input[type="text"],
+	input[type="password"],
+	input[type="email"] {
+		border-color: #e6e9ed;
+
+		&:focus {
+			outline: 0;
+			box-shadow: none;
+		}
+	}
+
+	input[type="checkbox"] {
+		margin-right: .5rem;
+	}
+
+
+	/* Style for labels */
+
+	label {
+		.Montserrat();
+		font-size: 14px;
+		color: #0f0f0f;
+	}
+
+
+	/* NB: the label for checkbox fields looks different from other labels. */
+
+	.checkbox label {
+		.Lato();
+		font-weight: normal;
+		color: #8890a4;
+		font-size: 1rem;
+	}
+
+
+	/* Errors */
+
+	.parsley-errors-list {
+		padding: 0;
+		list-style: none;
+		margin-top: 1rem;
+		color: #c00;
+		font-weight: normal;
+		.Lato();
+		font-size: .8rem;
+	}
+
+
+	/* Form sections: */
+	/* 1. Title section */
+
+	.title {
+		background: #fff;
+		text-align: center;
+		border-bottom: 1px solid #e6e9ed;
+		width: 100%;
+		border-top-left-radius: 5px;
+		border-top-right-radius: 5px;
+
+		/* Form title */
+		h3 {
+			margin: 0 0 .25rem;
+			font-size: 18px;
+			color: #0f0f0f;
+			font-weight: normal;
+		}
+
+		/* Form description */
+		p {
+			margin-bottom: 0;
+			font-size: 14px;
+			color: #8890a4;
+		}
+
+		/* Logo */
+		.logo {
+			img {
+				max-width: 50px;
+			}
+		}
+	}
+
+	/* 2. Fields section */
+
+	.fields {
+		background: #fff;
+	}
+
+	/* 3. Footer */
+
+	.footer {
+		background: #fff;
+		text-align: center;
+		border-bottom-left-radius: 5px;
+		border-bottom-right-radius: 5px;
+	}
+}
+
+
+/*
+ * Same of: @media (--breakpoint-md).
+ * See: http://www.basscss.com/docs/responsive-states/
+ */
+@media (min-width: 52em) {
+
+	.md-p3 {
+		padding: 2rem;
+	}
+
+	.md-p4 {
+		padding: 2.5rem;
+	}
+
+	.md-mb3 {
+		margin-bottom: 2rem;
+	}
+
+	.form {
+
+		.title, .fields {
+			background: #fff;
+			border: 1px solid #d4d8df;
+		}
+
+
+		/* Form sections: */
+		/* 1. Title section */
+
+		.title {
+			h3 {
+				margin-top: 1em;
+			}
+
+			.logo {
+				img {
+					max-width: 75px;
+				}
+			}
+		}
+
+		/* 2. Fields section */
+
+		.fields {
+			border-bottom-left-radius: 5px;
+			border-bottom-right-radius: 5px;
+			margin-top: -1px;
+			box-shadow: 0 1px 3px #eff0f0;
+		}
+
+		/* 3. Footer */
+
+		.footer {
+			background: transparent;
+		}
+
+	}
+
+}
