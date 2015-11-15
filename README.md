@@ -5,7 +5,7 @@ This is a signup test page.
 
 ## Install
 
-The
+Use the following command to install the dependencies.
 
 ```
 npm install
