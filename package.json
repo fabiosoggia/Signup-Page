@@ -2,7 +2,7 @@
   "name": "Signup-Page",
   "version": "0.0.1",
   "author": "Fabio Soggia",
-  "devDependencies": {
+  "dependencies": {
     "basscss": "^7.0.4",
     "gulp": "^3.9.0",
     "gulp-processhtml": "^1.1.0",
