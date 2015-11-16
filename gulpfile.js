@@ -10,7 +10,7 @@ var stylish = require("jshint-stylish");
 var uglify = require("gulp-uglify");
 var watch = require("gulp-watch");
 var processhtml = require("gulp-processhtml");
-var uncss = require('gulp-uncss');
+var uncss = require("gulp-uncss");
 
 var css = [
 	"node_modules/normalize.css/normalize.css",
@@ -49,6 +49,7 @@ gulp.task("build", function() {
 		.pipe(gulp.dest("build/css"));
 
 	gulp.src(js)
+		// Lint within the editor
         // .pipe(jshint())
         // .pipe(jshint.reporter(stylish))
         .pipe(concat("app.js"))
@@ -70,13 +71,19 @@ gulp.task("watch", function() {
 	gulp.watch("*", ["build"]);
 });
 
-gulp.task("dist", ["build"], function() {
+gulp.task("dist", function() {
     gulp.src(css)
         .pipe(concat("style"))
         .pipe(less())
         .on("error", function (error) {
             console.error("Unable to LESS files due to", error);
         })
+        .pipe(uncss({
+            "html": html,
+            "ignore": [
+                /parsley-/
+            ]
+        }))
         .pipe(cssmin())
         .pipe(rename({
             extname: ".min.css"
@@ -102,4 +109,4 @@ gulp.task("dist", ["build"], function() {
     }
 });
 
-gulp.task("default", ["watch"]);
+gulp.task("default", ["build"]);
