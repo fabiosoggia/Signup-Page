@@ -68,7 +68,7 @@ gulp.task("build", function() {
 });
 
 gulp.task("watch", function() {
-	gulp.watch("*", ["build"]);
+	gulp.watch(["css/**/*", "js/**/*", "*.html"], ["build"]);
 });
 
 gulp.task("dist", function() {
