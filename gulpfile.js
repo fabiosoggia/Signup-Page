@@ -84,7 +84,9 @@ gulp.task("dist", function() {
                 /parsley-/
             ]
         }))
-        .pipe(cssmin())
+        .pipe(cssmin({
+        	"keepSpecialComments": 0
+    	}))
         .pipe(rename({
             extname: ".min.css"
          }))
