@@ -55,27 +55,27 @@
 				<form class="mxn1 clearfix md-col-10 mx-auto" id="signin-form">
 					<label class="mb2 col col-12 md-col-7 px1 md-mt2">
 						Full name
-						<input data-parsley-required="true" id="full-name" name="full-name" placeholder="Full name" type="text" class="block col-12 mt1 field">
+						<input data-parsley-required data-parsley-alpha id="full-name" name="full-name" placeholder="Full name" type="text" class="block col-12 mt1 field">
 					</label>
 
 					<label class="mb2 col col-12 md-col-5 px1">
 						Username
-						<input data-parsley-required="true" id="username" name="username" placeholder="Username" type="text" class="block col-12 mt1 field">
+						<input data-parsley-required id="username" name="username" placeholder="Username" type="text" class="block col-12 mt1 field">
 					</label>
 
 					<label class="mb2 col col-12 px1">
 						Email address
-						<input data-parsley-required="true" id="email" name="email" placeholder="Email address" type="email" class="block col-12 mt1 field">
+						<input data-parsley-required id="email" name="email" placeholder="Email address" type="email" class="block col-12 mt1 field">
 					</label>
 
 					<label class="mb2 col col-12 md-col-7 px1">
 						Country
-						<input data-parsley-required="true" id="country" name="country" placeholder="Country" type="text" class="block col-12 mt1 field">
+						<input data-parsley-required data-parsley-alpha id="country" name="country" placeholder="Country" type="text" class="block col-12 mt1 field">
 					</label>
 
 					<label class="mb2 col col-12 md-col-5 px1">
 						City
-						<input data-parsley-required="true" id="city" name="city" placeholder="City" type="text" class="block col-12 mt1 field">
+						<input data-parsley-required data-parsley-alpha id="city" name="city" placeholder="City" type="text" class="block col-12 mt1 field">
 					</label>
 
 					<label class="col col-12 px1">
@@ -84,12 +84,12 @@
 					</label>
 					<label class="mb2 md-mb3 col col-12 px1">
 						<!-- The label element may contain at most one button, input, keygen, meter, output, progress, select, or textarea descendant. Use a second label to wrap the second field. -->
-						<input data-parsley-required="true" data-parsley-equalto="#password" id="r-password" name="r-password" placeholder="Repeat password" type="password" class="block col-12 field combo-last">
+						<input data-parsley-required data-parsley-equalto="#password" id="r-password" name="r-password" placeholder="Repeat password" type="password" class="block col-12 field combo-last">
 					</label>
 
 					<div class="checkbox col col-12 md-col-7 p2 mb2 px1">
 						<label>
-							<input data-parsley-required="true" id="terms" name="terms" type="checkbox">
+							<input data-parsley-required id="terms" name="terms" type="checkbox">
 							I accept the <a href="#">Terms &amp; Conditions</a>.
 						</label>
 					</div>
